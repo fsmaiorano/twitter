@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+mobile/node_modules
+
 backend/node_modules
 backend/dist
 
@@ -24,3 +26,76 @@ frontend/.env.production.local
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
+
+#mobile
+# Xcode
+/mobile/!**/*.xcodeproj
+/mobile/!**/*.pbxproj
+/mobile/!**/*.xcworkspacedata
+/mobile/!**/*.xcsettings
+/mobile/!**/*.xcscheme
+/mobile/*.pbxuser
+/mobile/!default.pbxuser
+/mobile/*.mode1v3
+/mobile/!default.mode1v3
+/mobile/*.mode2v3
+/mobile/!default.mode2v3
+/mobile/*.perspectivev3
+/mobile/!default.perspectivev3
+/mobile/xcuserdata
+/mobile/*.xccheckout
+/mobile/*.moved-aside
+/mobile/DerivedData
+/mobile/*.hmap
+/mobile/*.ipa
+/mobile/*.xcuserstate
+/mobile/project.xcworkspace
+
+# Gradle
+/mobile/build/
+/mobile/RNTester/android/app/build/
+/mobile/RNTester/android/app/gradle/
+/mobile/RNTester/android/app/gradlew
+/mobile/RNTester/android/app/gradlew.bat
+/mobile/ReactAndroid/build/
+
+# Buck
+/mobile/.buckd
+/mobile/buck-out
+/mobile/ReactAndroid/src/main/jni/prebuilt/lib/armeabi-v7a/
+/mobile/ReactAndroid/src/main/jni/prebuilt/lib/x86/
+/mobile/ReactAndroid/src/main/gen
+
+# Watchman
+/mobile/.watchmanconfig
+
+# Android
+/mobile/.idea
+/mobile/.gradle
+/mobile/local.properties
+/mobile/*.iml
+/mobile/android/
+
+# Node
+node_modules
+/mobile/*.log
+/mobile/.nvm
+/mobile//bots/node_modules/
+/mobile/package-lock.json
+
+# OS X
+/mobile/.DS_Store
+
+# Test generated files
+/mobile//ReactAndroid/src/androidTest/assets/AndroidTestBundle.js
+/mobile/*.js.meta
+
+/mobile//coverage
+/mobile//third-party
+
+# Root dir shouldn't have Xcode project
+/mobile/*.xcodeproj
+
+# ReactCommon subdir shouldn't have Xcode project
+/mobile/ReactCommon/**/*.xcodeproj
+/mobile/RNTester/build
