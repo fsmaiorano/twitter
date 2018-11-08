@@ -1,4 +1,4 @@
-# Twitter Frontend
+# Twitter Backend
 
 ### Prerequisites
 
@@ -11,12 +11,16 @@ Install all dependecies. Execute the below command inside of each directory.
 ```
 $ yarn or npm install
 
+
+
 ```
 
 ## Deployment
 
 ```
 $ yarn build or npm run build
+
+
 
 ```
 
