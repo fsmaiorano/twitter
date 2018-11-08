@@ -56,11 +56,11 @@ class ServerExpress {
 
   private listen(): void {
     this.server.listen(this.port, () => {
-      console.log("Running server on port %s", this.port);
+      console.log(`Twitter Backend ONLINE on port: ${this.port}`);
     });
 
     this.io.on("connect", (socket: any) => {
-      console.log("Connected client on port %s.", this.port);
+      console.log(`Connected client on port ${this.port}`);
       socket.on("message", (m: any) => {
         console.log("[server](message): %s", JSON.stringify(m));
         this.io.emit("message", m);
