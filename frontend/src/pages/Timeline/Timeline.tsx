@@ -31,7 +31,7 @@ class Timeline extends React.Component<IProps, IState> {
   }
 
   subscribeToEvents = () => {
-    const io = socket("http://localhost:3000");
+    const io = socket("http://localhost:4000");
 
     io.on("tweet", (data: any) => {
       this.setState({ tweets: [data, ...this.state.tweets] });
@@ -54,8 +54,8 @@ class Timeline extends React.Component<IProps, IState> {
       content: this.state.newTweet
     };
 
+    debugger;
     let response = await api.post("tweets", tweet);
-    console.log(response);
 
     this.setState({ newTweet: "" });
   };
