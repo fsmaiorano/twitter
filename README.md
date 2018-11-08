@@ -1,6 +1,6 @@
 # Twitter
 
-A Twitter Clone application with Frontend and Backend.
+A Twitter Clone application with Frontend, Backend and iOS App.
 This is a demonstration of how websockets works in a complete environment in Javascript (+ Typescript).
 
 ## Getting Started
