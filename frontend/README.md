@@ -1,5 +1,7 @@
 # Twitter Frontend
 
+:warning: Launch the backend application before running this project.
+
 ### Prerequisites
 
 :warning: This project need of NodeJS installed. If you wish use Yarn, install these too.

@@ -1,5 +1,7 @@
 ## Twitter iOS App
 
+:warning: Launch the backend application before running this project.
+
 ### Prerequisites
 
 :warning: This project need of XCode installed.
