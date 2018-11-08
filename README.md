@@ -18,9 +18,6 @@ Install all dependecies separately. Execute the below command inside of each dir
 
 ```
 $ yarn or npm install
-
-
-
 ```
 
 ## Deployment
@@ -30,7 +27,3 @@ You find these information inside of each project.
 ## License
 
 :free:
-
-## Acknowledgments
-
-A big thanks to Diego Fernandes - CTO of Rocketseat for introduce some concepts for this projects.
