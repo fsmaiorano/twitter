@@ -1,12 +1,12 @@
 # Twitter
 
-A Twitter Clone application with Frontend, Backend and iOS App.
+A Twitter Clone application with Frontend, Backend, Desktop and iOS App.
 This is a demonstration of how websockets works in a complete environment in Javascript (+ Typescript).
 
 ## Getting Started
 
 To run this project, you need execute the backend server and the frontend separately.
-The Backend will run at the port 4000 and the Frontend use the port 3000.
+The Backend will run at the port 4000 and the Frontend / Desktop use the port 3000.
 
 ### Prerequisites
 
