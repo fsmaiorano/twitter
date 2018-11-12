@@ -4,6 +4,7 @@
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
+  "description": "twitter-clone",
   "author": {
     "name": "Fábio Santini Maiorano",
     "email": "fsmaiorano@gmail.com"
@@ -14,7 +15,24 @@
     "react-dom": "^16.6.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.1.1",
+    "electron-is-dev": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.9",
+    "@types/node": "10.12.2",
+    "@types/react": "16.4.18",
+    "@types/react-dom": "16.0.9",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/socket.io": "^2.1.0",
+    "@types/socket.io-client": "^1.4.32",
+    "concurrently": "^4.0.1",
+    "cross-env": "^5.2.0",
+    "electron": "^3.0.8",
+    "electron-builder": "^20.34.0",
+    "node-sass": "^4.10.0",
+    "typescript": "3.1.6",
+    "wait-on": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,8 +44,11 @@
     "build:electron:all": "yarn build && electron-builder --windows --linux --macos",
     "build:electron:windows": "yarn build && electron-builder --windows ",
     "build:electron:linux": "yarn build && electron-builder --linux",
-    "build:electron:osx": "yarn build && electron-builder --macos",
-    "release": "yarn build && electron-builder --publish=always"
+    "build:electron:osx": "yarn build && electron-builder  --c.extraMetadata.main=build/electron.js --macos -p always",
+    "release": "yarn build && electron-builder --publish=always",
+    "start:dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "electron-builder --dir",
+    "dist": "npx build --x64 --macos "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,29 +59,19 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "@types/jest": "23.3.9",
-    "@types/node": "10.12.2",
-    "@types/react": "16.4.18",
-    "@types/react-dom": "16.0.9",
-    "@types/react-router-dom": "^4.3.1",
-    "@types/socket.io-client": "^1.4.32",
-    "@types/socket.io": "^2.1.0",
-    "electron": "^3.0.8",
-    "electron-builder": "^20.34.0",
-    "node-sass": "^4.10.0",
-    "typescript": "3.1.6"
-  },
   "build": {
     "appId": "com.twitter-clone",
     "productName": "twitter-clone",
     "copyright": "copyright example",
     "files": [
+      "build/electron.js",
       "build/**/*",
       "node_modules/**/*"
     ],
+    "extraResources": "app/myfolder/mysubfolder/mysripts",
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "build/static",
+      "output": "dist"
     }
   }
 }
