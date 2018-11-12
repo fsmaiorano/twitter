@@ -1,0 +1,66 @@
+{
+  "name": "desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": {
+    "name": "Fábio Santini Maiorano",
+    "email": "fsmaiorano@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "socket.io": "^2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "build:electron:all": "yarn build && electron-builder --windows --linux --macos",
+    "build:electron:windows": "yarn build && electron-builder --windows ",
+    "build:electron:linux": "yarn build && electron-builder --linux",
+    "build:electron:osx": "yarn build && electron-builder --macos",
+    "release": "yarn build && electron-builder --publish=always"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/jest": "23.3.9",
+    "@types/node": "10.12.2",
+    "@types/react": "16.4.18",
+    "@types/react-dom": "16.0.9",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/socket.io-client": "^1.4.32",
+    "@types/socket.io": "^2.1.0",
+    "electron": "^3.0.8",
+    "electron-builder": "^20.34.0",
+    "node-sass": "^4.10.0",
+    "typescript": "3.1.6"
+  },
+  "build": {
+    "appId": "com.twitter-clone",
+    "productName": "twitter-clone",
+    "copyright": "copyright example",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}
