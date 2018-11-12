@@ -15,6 +15,20 @@ $ yarn or npm install
 
 ```
 
+## Development
+
+Execute the script:
+
+```
+$ yarn start
+```
+
+and
+
+```
+$ yarn electron-dev (for Linux and MacOS users) or electron-dev-windows (for Windows users)
+```
+
 ## Deployment
 
 Build all Platforms
